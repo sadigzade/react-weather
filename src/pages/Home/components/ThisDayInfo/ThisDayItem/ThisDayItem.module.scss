@@ -1,0 +1,35 @@
+@import '../../../../../styles/variables.scss';
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .indicator {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .indicator__name {
+    font-size: 14px;
+    color: $base-color;
+    margin-right: 20px;
+  }
+
+  .indicator__value {
+    font-size: 14px;
+    color: $lite-color;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../styles/variables.scss';
+
+.this__day_info {
+  position: relative;
+  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+  background: $lite-background;
+  box-shadow: $box-shadow;
+  border-radius: 20px;
+}
+
+.cloud__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

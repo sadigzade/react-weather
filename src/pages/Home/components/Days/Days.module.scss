@@ -1,0 +1,12 @@
+@import '../../../../styles/variables.scss';
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  background-color: $lite-background;
+  box-shadow: $box-shadow;
+  border-radius: 0px 0px $border-radius $border-radius;
+  margin-top: 7px;
+}

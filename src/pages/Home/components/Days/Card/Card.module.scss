@@ -1,0 +1,49 @@
+@import '../../../../../styles/variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba($primary-color, 0.2);
+  border-radius: 10px;
+  width: 149px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 3px 20px rgba(147, 144, 144, 0.28);
+  }
+
+  .day {
+    color: $lite-color;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  .day__info {
+    font-size: 14px;
+    color: $base-color;
+    margin-bottom: 12px;
+  }
+
+  .img {
+    margin-bottom: 13px;
+  }
+
+  .temp__day {
+    font-size: 18px;
+    font-weight: 500;
+    color: $lite-color;
+  }
+
+  .temp__night,
+  .info {
+    font-size: 13px;
+    color: $base-color;
+  }
+
+  .temp__night {
+    margin-bottom: 6px;
+  }
+}

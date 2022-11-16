@@ -1,0 +1,35 @@
+@import '../../../../../styles/variables.scss';
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  .tab,
+  .cancle {
+    margin-right: 15px;
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: $lite-background;
+    box-shadow: $box-shadow;
+    transition: 0.2s;
+    cursor: pointer;
+    color: $lite-color;
+  }
+
+  .tab {
+    &.active {
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+  .cancle {
+    margin-right: 0;
+  }
+}
