@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Select from 'react-select';
 
 import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector';
+import { useTheme } from '../../hooks/useTheme';
 
 import styles from './Header.module.scss';
 
@@ -14,12 +15,12 @@ const options = [
 ];
 
 const Header = (props: Props) => {
-  const [theme, setTheme] = useState('light');
+  const theme = useTheme();
 
   const colourStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: theme === 'dark' ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
+      backgroundColor: theme.theme === 'dark' ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
       width: 194,
       height: 37,
       border: 'none',
@@ -28,16 +29,17 @@ const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: theme === 'dark' ? '#ffffff' : '#000000',
+      color: theme.theme === 'dark' ? '#ffffff' : '#000000',
     }),
   };
 
   const changeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light');
   };
 
   useEffect(() => {
     const root = document.querySelector(':root') as HTMLElement;
+    // console.log(theme);
 
     const components = [
       'body-background',
@@ -48,9 +50,9 @@ const Header = (props: Props) => {
     ];
 
     components.forEach((component) => {
-      root.style.setProperty(`--${component}-default`, `var(--${component}-${theme})`);
+      root.style.setProperty(`--${component}-default`, `var(--${component}-${theme.theme})`);
     });
-  }, [theme]);
+  }, [theme.theme]);
 
   return (
     <header className={styles.header}>
