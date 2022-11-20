@@ -33,6 +33,11 @@ const Header = (props: Props) => {
       ...styles,
       color: theme.theme === Theme.DARK ? '#ffffff' : '#000000',
     }),
+    menu: (styles: any) => ({
+      ...styles,
+      backgroundColor: theme.theme === Theme.DARK ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
+      color: theme.theme === Theme.DARK ? '#ffffff' : '#000000',
+    }),
   };
 
   const changeTheme = () => {
