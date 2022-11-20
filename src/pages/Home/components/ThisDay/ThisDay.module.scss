@@ -4,7 +4,7 @@
   padding: 20px;
   max-width: 400px;
   width: 100%;
-  background-color: $lite-background;
+  background-color: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 }
@@ -29,7 +29,7 @@
 
   .this__dn {
     font-size: 40px;
-    color: $lite-color;
+    color: var(#{--text-color-default});
   }
 }
 

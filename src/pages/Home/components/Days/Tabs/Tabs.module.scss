@@ -15,11 +15,11 @@
     font-size: 18px;
     padding: 8px 20px;
     border-radius: 5px;
-    background-color: $lite-background;
+    background-color: var(#{--components-background-default});
     box-shadow: $box-shadow;
     transition: 0.2s;
     cursor: pointer;
-    color: $lite-color;
+    color: var(#{--text-color-default});
   }
 
   .tab {

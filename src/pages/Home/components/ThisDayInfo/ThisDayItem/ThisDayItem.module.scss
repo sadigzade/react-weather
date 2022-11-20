@@ -30,6 +30,6 @@
 
   .indicator__value {
     font-size: 14px;
-    color: $lite-color;
+    color: var(#{--text-color-default});
   }
 }
